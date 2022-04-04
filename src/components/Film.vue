@@ -10,7 +10,7 @@
         <div class="my-card m-5">
             <h1>{{film.original_name}}</h1>
             <h3>{{film.original_language}}</h3>
-            <span v-for="(x, index) in Math.round(film.vote_average)" :key="index">*</span>
+            <span v-for="(x, index) in star(film.vote_average)" :key="index">*</span>
         </div>
     </div>
 </template>
@@ -29,7 +29,9 @@ export default {
         getPoster(path){
             return `https://image.tmdb.org/t/p/w342/${path}`
         },
-
+        star(vote){
+        return Math.ceil(vote / 2);
+        }
     }
 }
 </script>
