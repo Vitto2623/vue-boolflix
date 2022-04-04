@@ -24,7 +24,7 @@ export default {
     'seriesTv' : Array
   },
   components: {
-    Film
+    Film,
   },
 }
 </script>
