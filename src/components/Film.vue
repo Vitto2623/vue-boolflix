@@ -1,9 +1,17 @@
 <template>
     <div>
-        <h1>{{Film.title}}</h1>
-        <h2>{{Film.original_title}}</h2>
-        <h3>{{Film.original_language}}</h3>
-        <h3>{{Film.vote_average}}</h3>
+        <div class="card">
+            <img :src="getPoster(film.poster_path)" alt="">
+            <h1>{{film.title}}</h1>
+            <h2>{{film.original_title}}</h2>
+            <h3>{{film.original_language}}</h3>
+            <h3>{{film.vote_average}}</h3>
+        </div>
+        <div>
+            <h1>{{film.original_name}}</h1>
+            <h3>{{film.original_language}}</h3>
+            <h3>{{film.vote_average}}</h3>
+        </div>
     </div>
 </template>
 
@@ -11,7 +19,12 @@
 export default {
     name : "IndexFilm",
     props: {
-        "Film" : Object
+        "film" : Object
+    },
+    methods:{
+        getPoster(path){
+            return `https://image.tmdb.org/t/p/w342/${path}`
+        }
     }
 }
 </script>
