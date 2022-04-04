@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header  @searchChar="newSearch"/>
-    <FilmList :searchString="searchString" />
+    <Header @searchChar="newSearch"/>
+    <FilmList :searchString="searchString"/>
   </div>
 </template>
 
@@ -9,21 +9,21 @@
 import Header from './components/Header.vue'
 import FilmList from './components/FilmList.vue'
 export default {
-  name: 'App',
+  name : "App",
   components: {
     Header,
     FilmList,
   },
   data: function(){
     return{
-      searchString : "",
+      searchString : ""
     }
   },
-  methods:{
+  methods: {
     newSearch(stringToSearch){
       console.warn(stringToSearch);
-      this.searchString = stringToSearch;
-    },
+      this.searchString = stringToSearch
+    }
   }
 }
 </script>
