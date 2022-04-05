@@ -5,7 +5,7 @@
       <!--FILM -->
       <div class="row justify-content-center">
         <div v-for="(element, index) in movies" :key="index" class="col-3 p-5">
-          <Film :film="element" class="img"/>
+          <Film :film="element" />
         </div>
       </div>
       <!--SERIE TV-->

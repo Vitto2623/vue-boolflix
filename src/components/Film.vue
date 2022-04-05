@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="my-card  animate__animated animate__zoomIn rounded-3 p-2 bg-gradient">
-            <img :src="getPoster(film.poster_path)" alt="">
+            <img :src="getPoster(film.poster_path)" alt="locandina-film">
             <div class="info animate__animated animate__flip">
                 <span class="fs-5 fw-bolder text-white">Titolo:</span> <span class="fs-5 text-white">{{film.title}}</span> <br>
                 <span class="fs-5 fw-bolder text-white">Titolo originale:</span> <span class="fs-6 text-white">{{film.original_title}}</span> <br>
