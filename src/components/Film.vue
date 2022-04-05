@@ -5,12 +5,10 @@
             <h1>{{film.title}}</h1>
             <h2>{{film.original_title}}</h2>
             <Lang-flag  :iso ="film.original_language" />
-            <h3>{{film.vote_average}}</h3>
         </div>
         <div class="my-card m-5">
             <h1>{{film.original_name}}</h1>
-            <h3>{{film.original_language}}</h3>
-            <span v-for="(x, index) in star(film.vote_average)" :key="index">*</span>
+            <span v-for="(x, index) in star(film.vote_average)" :key="index"><font-awesome-icon icon="fa-solid fa-star" /></span>
         </div>
     </div>
 </template>
@@ -37,4 +35,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

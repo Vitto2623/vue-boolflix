@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <div class="my-container">
     <div class="container-fluid p-5">
-      <div class="row">
-        <div v-for="(element, index) in movies" :key="index" class="col-2 p-5 m-5">
-          <Film :film="element"/>
+      <h1 class="text-center text-black">BENVENUTO SU BOOLFLIX, TROVA UN FILM O SERIE TV</h1>
+      <div class="row justify-content-center">
+        <div v-for="(element, index) in movies" :key="index" class="col-3  m-5">
+          <Film :film="element" class="img"/>
         </div>
       </div>
       <div class="row">
-        <div v-for="(element, index) in seriesTv" :key="index" class="col-2 p-5 m-5">
+        <div v-for="(element, index) in seriesTv" :key="index" class="col-3 p-5 m-5">
           <Film :film="element"/>
         </div>
       </div>
@@ -29,6 +30,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.my-container{
+  background-color: grey;
+}
+.img{
+  width: 100%;
+}
 </style>
