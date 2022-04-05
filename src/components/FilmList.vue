@@ -1,7 +1,7 @@
 <template>
   <div class="my-container">
     <div class="container-fluid p-5">
-      <h1 class="text-center text-black animate__animated animate__zoomIn my-shadow">BENVENUTO SU BOOLFLIX, CERCA UN FILM O SERIE TV</h1>
+      <h1 class="text-center text-black animate__animated animate__zoomIn my-shadow">BENVENUTO SU BOOLFLIX, CERCA UN FILM O UNA SERIE TV</h1>
       <!--FILM -->
       <div class="row justify-content-center">
         <div v-for="(element, index) in movies" :key="index" class="col-3 p-5">
@@ -45,8 +45,8 @@ export default {
 }
 
 .my-shadow{
-  box-shadow: 2px 5px 120px 35px red;
-  background-color: rgba(255,0,0,0.64);
+  box-shadow: 2px 41px 121px 84px red;
+  background-color: rgba(255,0,0,0.90);
   border-radius: 23px;
 }
 </style>
