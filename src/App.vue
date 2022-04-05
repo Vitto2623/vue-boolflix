@@ -53,7 +53,11 @@ export default {
 @import '~bootstrap/scss/bootstrap';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: grey;
+  background-color: black;
   height: 1000px;
+}
+
+body{
+  background-color: black;
 }
 </style>

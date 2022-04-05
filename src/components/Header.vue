@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-black my-navbar">
+    <nav class="navbar navbar-light bg-black my-navbar px-2">
         <div class="container-fluid">
             <a class="navbar-brand text-danger fs-2">BOOLFLIX</a>
             <div class="d-flex">

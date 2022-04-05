@@ -1,31 +1,31 @@
 <template>
-    <div>
-        <div class="my-card  animate__animated animate__zoomIn rounded-3 p-2 bg-gradient">
-            <img :src="getPoster(film.poster_path)" alt="">
+  <div>
+    <div class="my-card animate__animated animate__zoomIn rounded-3 p-2 bg-gradient">
+            <img :src="getPoster(serie.poster_path)" alt="">
             <div class="info">
-                <span class="fs-5 text-white">Titolo:</span> <span class="fs-5 fw-bolder text-danger">{{film.title}}</span> <br>
-                <span class="fs-5 text-white">Titolo originale:</span> <span class="fs-6 fw-bolder text-danger">{{film.original_title}}</span> <br>
-                <span class="text-white">Lingua:</span> <Lang-flag  :iso ="film.original_language" /> <br>
-                <span class="fs-3 text-white">Overview:</span><p class="fw-bolder text-danger">{{film.overview}}</p>
+                <span class="fs-5 text-white">Titolo:</span> <span class="fs-5 fw-bolder text-danger">{{serie.name}}</span> <br>
+                <span class="fs-5 text-white">Titolo originale:</span> <span class="fs-6 fw-bolder text-danger">{{serie.original_name}}</span> <br>
+                <span class="text-white">Lingua:</span> <Lang-flag  :iso ="serie.original_language" /> <br>
+                <span class="fs-3 text-white">Overview:</span><p class="fw-bolder text-danger">{{serie.overview}}</p>
                 <span class="text-white">Voto: </span>
-                <span v-for="(x, index) in star(film.vote_average)" :key="index" class="info">
+                <span v-for="(x, index) in star(serie.vote_average)" :key="index" class="info">
                     <font-awesome-icon icon="fa-solid fa-star" />
                 </span>
             </div>
         </div>
-    </div>
+  </div>
 </template>
 
 <script>
 import LangFlag from 'vue-lang-code-flags';
 import 'animate.css';
 export default {
-    name : "IndexFilm",
+    name : 'IndexSerieTv',
     props: {
-        "film" : Object
+        'serie' : Object
     },
     components:{
-        LangFlag,
+        LangFlag
     },
     methods:{
         getPoster(path){
